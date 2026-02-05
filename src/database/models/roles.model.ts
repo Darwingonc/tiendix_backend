@@ -12,10 +12,7 @@ import { StoreUser } from './store_users.model';
 })
 export class Role extends Model {
 
-  @Column({
-    primaryKey: true,
-    autoIncrement: true,
-  })
+  @Column({ primaryKey: true, autoIncrement: true })
   declare id: number;
 
   @Column({
@@ -29,9 +26,7 @@ export class Role extends Model {
   })
   declare name: string;
 
-  declare created_at: Date;
-  declare updated_at: Date;
-
   @HasMany(() => StoreUser)
   storeUsers: StoreUser[];
 }
+

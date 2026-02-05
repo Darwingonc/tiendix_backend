@@ -26,5 +26,5 @@ export class InventoryMovement extends Model {
     type: DataType.DATE,
     defaultValue: DataType.NOW,
   })
-  declare created_at: Date;
+  declare createdAt: Date;
 }

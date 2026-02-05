@@ -38,10 +38,6 @@ export class User extends Model {
   })
   declare password: string;
 
-  declare createdAt: Date;
-  declare updatedAt: Date;
-  declare deletedAt: Date | null;
-
   @HasMany(() => StoreUser)
   storeUsers: StoreUser[];
 }

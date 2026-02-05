@@ -30,9 +30,6 @@ export class StoreUser extends Model {
   @Column
   declare role_id: number;
 
-  declare createdAt: Date;
-  declare updatedAt: Date;
-
   @BelongsTo(() => User)
   user: User;
 
