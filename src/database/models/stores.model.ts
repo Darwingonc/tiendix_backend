@@ -10,7 +10,11 @@ export class Store extends Model {
   @Column({ primaryKey: true, autoIncrement: true })
   declare id: number;
 
-  @Column({ unique: true })
+  @Column({
+    type: DataType.UUID,
+    defaultValue: DataType.UUIDV4,
+    unique: true,
+  })
   declare uuid: string;
 
   @Column
